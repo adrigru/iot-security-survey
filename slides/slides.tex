@@ -1,7 +1,10 @@
-\documentclass{beamer}
+\documentclass[10pt, presentation]{beamer}
 %[10pt,presentation,german,aspectratio=1610,hyperref={pdfpagemode=FullScreen}]
-\usetheme{Berlin}
+\usetheme{Madrid}
 \usecolortheme{default}
+\usepackage[backend=bibtex,style=numeric]{biblatex}
+\addbibresource{refs.bib}
+
 
 %\hypersetup{pdfstartview={Fit}}
 
@@ -33,6 +36,7 @@
 %
 %\tableofcontents
 %\end{frame}
+\section{Introduction}
 %---------------------------------------------------------
     \begin{frame}
         \frametitle{Table of Contents}
@@ -43,17 +47,118 @@
             \item Tentative report schedule
         \end{enumerate}
     \end{frame}
+%---------------------------------------------------------
 
 % Introduciton Motivation
 %---------------------------------------------------------
-\section{Introduction}
-
 \begin{frame}
 \frametitle{Motivation}
   \begin{itemize}
-    \item
-  \end{e}
-
+    \item Internet of Things is constantly developing
+      \begin{itemize}
+          \item Estimated 20.4 billion connected devices worldwide in 2022\ \cite{WEBSITE:1}
+          \item Applications in various domains e.g.\ smart cities, smart healthcare, autonomous vehicles, industry 4.0, smart grids, etc.
+      \end{itemize}
+      \item Security and privacy are crucial
+      \begin{itemize}
+          \item Challenging constrains due to hardware and networking limitations
+          \item Heterogeneous networks producing large amounts of data
+      \end{itemize}
+    \item Fertile ground for privacy and security attacks
+  \end{itemize}
 \end{frame}
+%---------------------------------------------------------
+
+% Introduciton DDos
+%---------------------------------------------------------
+\begin{frame}
+\frametitle{Motivation}
+  \begin{itemize}
+    \item Insecure IoT devices may threaten critical Internet infrastructure
+      \begin{itemize}
+          \item Using vulnerable consumer IoT devices becomes a common technique for orchestrating DDoS attacks
+          \item Mirai botnet disrupted DNS service of Dyn and significantly limited accessibility of popular services such as Github, Netflix and Amazon
+      \end{itemize}
+      \item Intelligent system monitoring  leveraging ML/DL methods provides a solution for threat detection
+      \begin{itemize}
+          \item Anomaly detection can facilitate detection of malicious traffic
+          \item Prediction of future attacks by learning from existing examples
+        \end{itemize}
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------
+\section{Report structure}
+
+% Introduciton DDos
+%---------------------------------------------------------
+\begin{frame}
+\frametitle{Preliminary report structure}
+  \begin{itemize}
+    \item Introduction
+      \begin{itemize}
+          \item What is the domain?
+          \item What are the challenges?
+          \item Why is it important?
+      \end{itemize}
+      \item Background and related work
+      \begin{itemize}
+          \item Network anomaly detection
+          \item ML/DL for IoT security
+          \item DDos attacks in IoT networks
+        \end{itemize}
+      \item Theoretical framework and architectural design
+      \begin{itemize}
+          \item System architecture and performance measures
+          \item k-nearest neighbours
+          \item Boosting
+          \item Artificial neural network
+        \end{itemize}
+      \item Discussion
+      \item Conclusion
+  \end{itemize}
+\end{frame}
+
+\section{Related work}
+
+% Related work
+%---------------------------------------------------------
+\begin{frame}
+\frametitle{Related work}
+  \begin{itemize}
+    \item A Survey of Machine and Deep Learning Methods for Internet of Things (IoT) Security (IEE Communications Surveys \& Tutorials, cited by 425)
+    \item Real-time anomaly detection systems for Denial-of-Service attacks by weighted k-nearest-neighbor classifiers (Expert Systems with Applications, cited by 151)
+    \item Machine Learning DDoS Detection for Consumer Internet of Things Devices (2018 IEEE Security and Privacy Workshops (SPW), cited by 425)
+    \item Boosting-Based DDoS Detection in Internet of Things Systems (IEEE Internet of Things Journal 2022, cited by 20)
+    \item Detection of known and unknown DDoS attacks using Artificial Neural Networks (Neurocomputing, cited by 307)
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------
+
+\section{Report schedule}
+% Report schedule
+%---------------------------------------------------------
+\begin{frame}
+\frametitle{Report schedule}
+  \begin{itemize}
+    \item 10th May 2022: Presentation
+    \item Report outline, finish draft introduction and related work, start working on methods
+    \item 8th June 2022: Preliminary version of the report
+    \item Finish methods, discussion and conclusion, correct spelling, create slides for presentation
+    \item 3rd July 2022: Deadline for report submission
+    \item 6th July 2022: Final presentation
+  \end{itemize}
+\end{frame}
+
+%---------------------------------------------------------
+
+%---------------------------------------------------------
+%Refs
+    \begin{frame}
+        \frametitle{References}
+        \printbibliography
+    \end{frame}
+%\end{frame}
 
 \end{document}
