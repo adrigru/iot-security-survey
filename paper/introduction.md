@@ -56,6 +56,7 @@
 - Cover one technique in depth
 - Discuss the pros and cons of approaches in context of IoT
 # Structure of the paper
+- TODO
 # References
 [What is DDos?](https://www.cisa.gov/uscert/ncas/tips/ST04-015)
 [Internet of Things: Security Vulnerabilities and Challenges](https://e-tarjome.com/storage/btn_uploaded/2020-05-19/1589883649_10674-etarjome%20English.pdf)
