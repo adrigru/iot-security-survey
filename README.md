@@ -9,6 +9,8 @@ The course is supervised by: Prof. Dr. Emmanuel Bacceli
 ## Outline
 - Introduction
 - Related Work
-
+- Background and Methods
+- Discussion
+- Conclusion
 ## References
 [TODO]
