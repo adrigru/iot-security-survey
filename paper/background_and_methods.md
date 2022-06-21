@@ -69,7 +69,7 @@
 - On device
     - Convolutional Neural Networks
         - Training in the cloud with larger amounts of data with GPU
-        - Once trained it provides a lightweight classifier to run on device (effcient in test phase)
+        - Once trained it provides a lightweight classifier to run on device (efficient in test phase)
         - Doesn't require feature engineering
         - Outperforms signature based malware detection in terms of accuracy and local storage
         - Used for preliminary malware detection on device
