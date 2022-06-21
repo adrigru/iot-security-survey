@@ -46,7 +46,8 @@ Furthermore, a variety of critical systems and infrastructure depends on these d
 The great interest and predicted future adoption make IoT an active area of research that attracts scientists from outside of computer science and electrical engineering, for instance, social sciences or environmental studies.
 The enormous number of connected devices poses a significant security threat and provides a vector for potential misuse.
 In particular, the propagation of insecure IoT devices offers a fertile ground for malicious actors and has resulted in multiple distributed denial of service (DDoS) attacks on critical internet infrastructure.
-To address this issue, scientists propose various solutions, including Machine Learning techniques. Machine Learning (ML) provides methods for detecting patterns in data and enjoys ever-increasing popularity.
+To address this issue, scientists propose various solutions, including Machine Learning techniques.
+Machine Learning (ML) provides methods for detecting patterns in data and enjoys ever-increasing popularity.
 Modern applications leverage Machine Learning for translation, speech recognition and computer vision.
 In the cyber-security field, Machine Learning finds use for fraud, malware and spam detection.
 With the recent emergence of Deep Learning, strategical reasoning and decision-making of a machine may exceed human performance creating room for novel use-cases.
@@ -58,21 +59,64 @@ The aim of this study is to evaluate several Machine Learning approaches for DDo
 It will highlight various strategies for DDoS detection in IoT systems to explore the current state of the art and explain one method in more detail.
 The objective is to improve the understanding of DDoS detection in IoT and demonstrate the role of Machine Learning.
 
-\section{Ease of Use}
+\section{Related Work}
+The application of Machine Learning approaches for DDoS detection in IoT is an emerging area of research.
+Although DDoS detection in IoT and DDoS detection with Machine Learning are both well-researched fields, the body of research on applying Machine Learning approaches for DDoS detection in IoT leaves much to be desired.
+There is no survey comparing Machine Learning and Deep Learning methods for DDoS detection under IoT constraints.
+Specifically, the practical aspects of these methods, such as computational complexity, energy consumption, ability to detect unknown attacks and detection performance, are unexplored and will benefit from further examination.
+The existing surveys focus on general DDoS attacks and defences in IoT or provide a broader perspective on various Machine Learning methods for IoT Security.
 
-\subsection{Maintaining the Integrity of the Specifications}
+\subsection{General DDoS Protection}
+In the general DDoS protection and prevention field, R. Vishwakarma and A. K. Jain present a comprehensive survey of DDoS attacks and DDoS defence techniques for IoT.
+They introduce the layered IoT architecture and demonstrate the security issues of IoT networks.
+They propose an extensive taxonomy of IoT-specific DDoS attack types and defence techniques.
+Furthermore, they compare the pros and cons of each method and discuss open research questions and limitations. Zargar et al., in their survey, propose a taxonomy of DDoS attacks and classify the existing countermeasures for different use-cases.
+They emphasise the role of IoT in the expansion of DDoS attacks.
 
-The IEEEtran class file is used to format your paper and style the text. All margins, 
-column widths, line spaces, and text fonts are prescribed; please do not 
-alter them. You may note peculiarities. For example, the head margin
-measures proportionately more than is customary. This measurement 
-and others are deliberate, using specifications that anticipate your paper 
-as one part of the entire proceedings, and not as an independent document. 
-Please do not revise any of the current designations.
+\subsection{Machine learning for DDoS protection}
+In the domain of DDoS detection using Machine Learning methods, Saied et al. apply Artificial Neural Networks (ANNs) to detect and prevent known and unknown DDoS attacks.
+They leverage network characteristic data to detect TCP, UDP and ICMP DDoS attacks.
+They obtain training data by reproducing the network environment under DDoS conditions.
+The classification accuracy was superior to existing approaches, particularly for detecting unknown DDoS attacks.
+Ming-Yang Su uses a weighted k-nearest neighbour classifier for real-time DDoS detection.
+He proposes a genetic algorithm for feature selection and weighting and evaluates his classifier using several well-known DDoS attacks.
+He obtains 97.42\% detection accuracy for known types of DDoS attacks and 78\% for the unknown.
+
+\subsection{Machine learning for IoT Security}
+In the Machine Learning for IoT Security field, Cvitic et al. propose a conceptual model for DDoS detection in IoT networks based on traffic characteristics.
+They argue that IoT-generated traffic is distinguishable from human-generated network traffic.
+They assign IoT traffic to three categories: periodic updates, event-driven and payload exchange.
+Based on the proposed model, DDoS attacks are an anomaly to the legitimate IoT traffic for a given device type.
+The authors suggest Boosting Machine Learning method for network traffic anomaly detection.
+Lopez-Martin et al. use flow statistics-based information from the packet header (bytes transmitted, packet interval times, TCP window size, etc.) to develop a network traffic classifier.
+They use a dataset of over 250 thousand network flow data points collected from over 100 different services. Their classifier combines a Recurrent Neural Network and a Convolutional Neural Network.
+Their best models classify the service (HTTP, Telnet, YouTube, Google, etc.) with 96.23\% accuracy.
+Furthermore, they emphasise the importance of flow data features for classification accuracy. Sivanathan et al. show over 99\% accuracy in classifying IoT devices based on patterns in their network activity.
+They collected network traffic data of 28 IoT devices such as cameras, lights and sensors for over six months.
+They present insights into the data using statistical features, propose a state-of-the-art performance multi-stage Machine Learning classifier and discuss trade-offs of their solution for real-time use.
+Al-Garadi et al. present a survey on Deep Learning methods for IoT Security.
+They introduce layers of the IoT system and picture various IoT-specific attack surfaces and threats.
+They review and discuss several Machine Learning and Deep Learning methods for IoT security in the context of the advantages, shortcomings and opportunities.
+Furthermore, they provide a comprehensive overview of studies applying Machine Learning and Deep Learning methods on different IoT layers (Perception, Network, Application).
+Finally, they discuss challenges, open issues and future directions for these techniques in IoT security.
+
+
+\subsection{Machine learning for DDoS detection in IoT}
+In the field of DDoS detection in IoT networks using Machine Learning, Aysa et al. investigate the performance of several Machine Learning approaches for DDoS detection based on network traffic patterns.
+The authors use a dataset of actual traffic data collected from 9 commercial IoT devices infected with Mirai and BASHLITE botnets.
+Preliminary results show that combining Decision Trees with a Random Forest outperforms other approaches.
+N. Ravi and S. M. Shalinie examine DDoS attacks triggered by malicious IoT devices on IoT servers.
+They leverage the Software-Defined Network paradigm and semi-supervised Machine Learning algorithm for DDoS detection and mitigation.
+They reported a 96.28\% accuracy rate in the detection of DDoS attacks.
+In "Boosting-Based DDoS Detection in Internet of Things", Cvitic et al. focus on the IoT-specific DDoS traffic detection model.
+They propose an approach for classifying devices into four classes based on the predictability of their network behaviour.
+Their classification accuracy lies between 99.92\% and 99.99\%.
+Roshi et al. demonstrate that IoT-specific network characteristics suffice to detect DDoS attacks with high precision using Machine Learning methods.
+They conclude that consumer gateway devices could discover local sources of DDoS attacks using low-cost and efficient Machine Learning algorithms.
 
 \section{Prepare Your Paper Before Styling}
-Before you begin to format your paper, first write and save the content as a 
-separate text file. Complete all content and organizational editing before 
+Before you begin to format your paper, first write and save the content as a
+separate text file. Complete all content and organizational editing before
 formatting. Please note sections \ref{AA}--\ref{SCM} below for more information on 
 proofreading, spelling and grammar.
 
