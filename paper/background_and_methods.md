@@ -65,7 +65,6 @@
     - Prevention based
 
 ### IoT Specific Machine Learning defences
-
 - On device
     - Convolutional Neural Networks
         - Training in the cloud with larger amounts of data with GPU
