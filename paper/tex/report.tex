@@ -27,7 +27,7 @@ or Math in Paper Title or Abstract.
 \end{abstract}
 
 \begin{IEEEkeywords}
-DDoS, IoT, anomaly detection, machine learning
+DDoS, IoT, anomaly detection, machine learning, botnet
 \end{IEEEkeywords}
 
 \section{Introduction}
@@ -71,7 +71,8 @@ The existing surveys focus on general DDoS attacks and defences in IoT or provid
 In the general DDoS protection and prevention field, R. Vishwakarma and A. K. Jain present a comprehensive survey of DDoS attacks and DDoS defence techniques for IoT.
 They introduce the layered IoT architecture and demonstrate the security issues of IoT networks.
 They propose an extensive taxonomy of IoT-specific DDoS attack types and defence techniques.
-Furthermore, they compare the pros and cons of each method and discuss open research questions and limitations. Zargar et al., in their survey, propose a taxonomy of DDoS attacks and classify the existing countermeasures for different use-cases.
+Furthermore, they compare the pros and cons of each method and discuss open research questions and limitations.
+Zargar et al., in their survey, propose a taxonomy of DDoS attacks and classify the existing countermeasures for different use-cases.
 They emphasise the role of IoT in the expansion of DDoS attacks.
 
 \subsection{Machine learning for DDoS protection}
@@ -90,9 +91,11 @@ They assign IoT traffic to three categories: periodic updates, event-driven and 
 Based on the proposed model, DDoS attacks are an anomaly to the legitimate IoT traffic for a given device type.
 The authors suggest Boosting Machine Learning method for network traffic anomaly detection.
 Lopez-Martin et al. use flow statistics-based information from the packet header (bytes transmitted, packet interval times, TCP window size, etc.) to develop a network traffic classifier.
-They use a dataset of over 250 thousand network flow data points collected from over 100 different services. Their classifier combines a Recurrent Neural Network and a Convolutional Neural Network.
+They use a dataset of over 250 thousand network flow data points collected from over 100 different services.
+Their classifier combines a Recurrent Neural Network and a Convolutional Neural Network.
 Their best models classify the service (HTTP, Telnet, YouTube, Google, etc.) with 96.23\% accuracy.
-Furthermore, they emphasise the importance of flow data features for classification accuracy. Sivanathan et al. show over 99\% accuracy in classifying IoT devices based on patterns in their network activity.
+Furthermore, they emphasise the importance of flow data features for classification accuracy.
+Sivanathan et al. show over 99\% accuracy in classifying IoT devices based on patterns in their network activity.
 They collected network traffic data of 28 IoT devices such as cameras, lights and sensors for over six months.
 They present insights into the data using statistical features, propose a state-of-the-art performance multi-stage Machine Learning classifier and discuss trade-offs of their solution for real-time use.
 Al-Garadi et al. present a survey on Deep Learning methods for IoT Security.
@@ -122,15 +125,18 @@ The second part comprises an overview of studies on IoT-specific Machine Learnin
 
 \subsection{IoT Architecture}
 %TODO: Add figure
-The IoT architecture consists of four primary layers. The first layer, called the perception layer, involves physical objects such as sensors, cameras, lightbulbs or microphones.
+The IoT architecture consists of four primary layers.
+The first layer, called the perception layer, involves physical objects such as sensors, cameras, lightbulbs or microphones.
 The main objective of the physical layer is to collect and store information from the surrounding environment, for instance, motion data, temperature, humidity or acceleration.
 These physical devices operate under the limitations of constrained energy consumption, low computational performance and sparse memory.
-The primary portion of data within the IoT ecosystem comes from this layer. The second layer is responsible for connecting heterogeneous IoT devices amongst each other and with the internet.
+The primary portion of data within the IoT ecosystem comes from this layer.
+The second layer is responsible for connecting heterogeneous IoT devices amongst each other and with the internet.
 The resource limitations of the perception layer force the network layer to optimize for power efficiency, low memory and lossy communication under noisy conditions.
 Covering the variety of use-cases requires different communication protocols, such as 6LoWPAN, WiFi, Bluetooth Low Energy, NFC, ultra-wideband, 3G, 4G etc.
 The third layer, called the middleware layer, provides an abstraction for IoT devices and their connectivity to allow easier application development.
 It facilitates interoperability between heterogeneous IoT devices and takes care of persistence, retrieval and manipulation of data while offering functionality for device discovery, context-aware understanding of sensor data and security.
-Finally, the last layer employs the middleware and provides room for creating a great range of applications in domains such as healthcare, transportation, manufacturing, etc. The main objective of the application layer is to present insights from the data to the user and allow user-friendly interaction with the underlying infrastructure.
+Finally, the last layer employs the middleware and provides room for creating a great range of applications in domains such as healthcare, transportation, manufacturing, etc.
+The main objective of the application layer is to present insights from the data to the user and allow user-friendly interaction with the underlying infrastructure.
 
 \subsection{Classification of DDoS Attacks}
 In practice, simple configuration and hardware constraints of IoT devices, particularly consumer-grade, result in outdated or insecure software and misconfiguration, creating an easy and attractive target for adversaries.
@@ -144,8 +150,10 @@ The incoming malicious traffic is difficult to tell from the legitimate traffic 
 IoT botnets play a primary role in application layer attacks by providing a source of legitimate traffic.
 
 The infrastructure layer attacks exploit vulnerabilities and flaws of the IoT network layer.
-They are more popular than application layer attacks. This type of attack consists of two categories: volume-based and protocol-based attacks.
-The volume-based attack is the simplest to perform. The main goal of a volume-based attack is to overwhelm the victim with the sheer amount of traffic.
+They are more popular than application layer attacks.
+This type of attack consists of two categories: volume-based and protocol-based attacks.
+The volume-based attack is the simplest to perform.
+The main goal of a volume-based attack is to overwhelm the victim with the sheer amount of traffic.
 Usually, the attacker employs reflection or amplification techniques for this type of attack.
 The reflection uses forged packets with a fake source IP address for sending requests to a powerful server.
 The server responds to these malicious requests and overloads the victim host specified by the fake source IP header with traffic while hiding the attacker's identity.
@@ -185,7 +193,8 @@ It is questionable, however, whether additional levels of complexity will find b
 Machine Learning algorithms for DDoS protection in IoT play a primary role in detecting malware and network traffic anomalies.
 Depending on the situation, the detection may occur on the IoT device, in the cloud or the network by leveraging additional or existing hardware.
 Machine Learning is a set of methods that leverage data to make predictions or decisions without specifying a pre-defined set of rules.
-Machine Learning algorithms fall into three main categories based on how they approach learning. Supervised Machine Learning algorithms require labelled data in the form of input-output mappings.
+Machine Learning algorithms fall into three main categories based on how they approach learning.
+Supervised Machine Learning algorithms require labelled data in the form of input-output mappings.
 The goal is to create a mathematical model and learn these mappings by optimizing a cost function.
 After training, the model can perform predictions on previously unseen data.
 Therefore, the model lifecycle consists of two phases: training and inference.
@@ -199,7 +208,7 @@ Trained models consist of thousands and even millions of parameters.
 In recent years, Machine Learning approaches outperformed existing methods for image classification, anomaly and malware detection and text generation.
 For this reason, it is worthwhile to investigate their value in the context of DDoS detection for IoT.
 
-\subsubsection{On-device Detection}
+\subsubsection{On-device detection}
 %TODO: provide figure of malware grayscale images
 In Malware Images: Visualization and Automatic Classification, the authors propose a novel approach for malware detection on IoT devices.
 They convert a binary malware executable file into an 8-bit vector and visualize it as fixed width, variable height grayscale image.
@@ -227,6 +236,33 @@ They train their model to differentiate between goodware and malware and perform
 They show that the model detects malware with about 94\% accuracy while having the least amount of parameters compared to models from other studies.
 As future improvements, they suggest further optimization of the network in terms of performance by reducing the network size.
 
+\subsubsection{Network-based detection}
+In N0BaIoT: Network-based Detection of IoT Botnet Attacks Using Deep Autoencoders, the authors propose a network-based approach that uses a deep learning model for anomaly detection in an enterprise network scenario.
+The detection leverages statistical features of benign IoT traffic such as packet Source IP address, MAC address, packet size, etc.
+It works by monitoring each device's traffic in the network and inspecting packets within different time window periods, for example, 100ms, 500ms, etc.
+Each host has a dedicated model to detect anomalous and suspicious behaviour.
+The benefit of this approach is a high heterogeneity tolerance considering the diversity of IoT hardware and functionality.
+Additionally, the detection runs on a dedicated host, so IoT devices do not require additional computation, memory and energy.
+Since model training and inference take place in the enterprise environment, the detection algorithm uses actual traffic data to learn.
+The proposed approach consists of four phases: data collection, feature extraction, training, and monitoring.
+First, the authors obtain the raw network data by monitoring organizational traffic using Wireshark.
+They ensure the collected data is clean by starting the capturing process immediately after the device installation and include traffic data of frequent (data transmission) and infrequent (booting) actions.
+They create a snapshot of 115 statistics describing the traffic from or to the device. They use a deep autoencoder architecture for anomaly detection.
+An autoencoder is an unsupervised deep learning model for learning efficient encodings of unlabelled input data.
+The model works by compressing the data into a reduced-size latent space and reconstructing the input.
+The training objective is to minimize the error between the input and output.
+Autoencoders usually perform applications such as dimensionality reduction, image compression, image denoising, anomaly detection and machine translation.
+The study uses an autoencoder to reconstruct benign instances of network behaviour traffic. When a device exhibits abnormal behaviour, the reconstruction will fail accordingly.
+They create a separate model for each device in the network and perform hyperparameter optimization, respectively.
+They use the mean square error between the model's input and the reconstructed output as their cost function.
+After the training, they determine a threshold for when the reconstructed instance is considered anomalous.
+Preliminary experiments show a high detection rate but often cause false alarms.
+The solution is to compute the detection based on the majority of votes over a sliding window to decide if the whole stram is benign or anomalous.
+For the model evaluation, the authors infect nine different manufacturer devices with BASHLITE and MIRAI botnets and monitor the network.
+Furthermore, the authors use the same traffic data to train three other commonly used anomaly detection algorithms and compare the results.
+The comparison reveals that autoencoder has the lowest ratio of false positives and requires the least time to perform detection.
+The weakness of this study is the difficulty of capturing diversified data for devices with broad functionalities.
+Future improvements include transfer learning that would allow re-using models pre-trained in other organizations to save time or support devices before connecting them to the enterprise network.
 \section*{References}
 
 Please number citations consecutively within brackets \cite{b1}. The 

@@ -33,7 +33,10 @@
 - In Boosting-Based DDoS Detection in Internet of Things Systems Cvitic et al. focus on IoT specific DDoS traffic detection model
   - They propose an approach of classifying devices in 4 classes based on the predictability of network generated traffic 
   - Their classification accuracy for those 4 classes lies between 99.92% and 99.99% and facilitates detection of DDoS-related traffic
-- Roshi et al. demonstrate that IoT-specific network characteristics are sufficient to detect DDoS attacks with high accuracy using machine learning methods
+- Doshi et al. demonstrate that IoT-specific network characteristics are sufficient to detect DDoS attacks with high accuracy using machine learning methods
+  - They train and compare performance of several machine learning algorithms including neural networks
+  - Dataset consists of network flow information
+  - All methods achieved accuracy of about 99%
   - They conclude that consumer gateway devices could detect local sources of DDoS attacks using low-cost and efficient machine learning algorithms
 ## Machine learning in IoT Security
 - In Novel Approach for Detection of IoT Generated DDoS Traffic Cvitic et al. propose a conceptual model for detection of DDoS attacks in IoT networks based on traffic characteristics  
