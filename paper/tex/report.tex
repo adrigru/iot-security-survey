@@ -10,10 +10,9 @@
 \usepackage{subcaption}
 \usepackage{booktabs, caption, tabularx, makecell}
 \usepackage{multirow}
-\usepackage{biblatex}
+%\usepackage{biblatex}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
 T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
-%\renewcommand{\baselinestretch}{1.5}
 \setcellgapes{4pt}
 
 \begin{document}
@@ -154,7 +153,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=\linewidth]{figures/iot-architecture.jpg}}
-        \caption{Architecture of IoT ecosystem consists of four layers. \cite{article:9}}
+        \caption{Architecture of IoT ecosystem consists of four layers \cite{article:9}.}
         \label{fig:iota}
     \end{figure}
 
@@ -179,7 +178,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     Their existence may remain undetected for years.
     IoT devices play a significant role in the effectiveness of DDoS attacks by providing uninterrupted internet connectivity, low-security standards and a large population.
     A recent Linux-based botnet called Mirai \cite{article:16}, \cite{article:6} caused the greatest known DDoS attack, with a flooding rate peaking at 1.2 Tbps.
-    The same botnet was responsible for a range of attacks, including an attack on DNS provider Dyn limiting access t internet services, such as Reddit, Netflix, Twitter and Amazon, across the European Union and the United States \cite{article:8}, \cite{article:16}.
+    The same botnet was responsible for a range of attacks, including an attack on DNS provider Dyn limiting access to services, such as Reddit, Netflix, Twitter and Amazon, across the European Union and the United States \cite{article:8}, \cite{article:16}.
     It operates and propagates in a systematic way, see Fig. \ref{fig:mirai}.
     Mirai scanns IP addresses for IoT devices with exposed Telnet or SSH services and tries brute-forcing the access using a dictionary of default username and password combinations \cite{article:8}, \cite{article:6}.
     In the next step, the C\&C server infects the devices by delivering the malware via FTP or wget for the specific hardware architecture, e.g. ARM, MIPS, Sparc, etc.
@@ -190,8 +189,8 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=\linewidth]{figures/botnet.png}}
-        \caption{Botnet infection and propagation. \cite{article:15}}
-        \label{fig1}
+        \caption{Botnet infection and propagation \cite{article:15}.}
+        \label{fig:mirai}
     \end{figure}
 
     \subsection{Classification of DDoS Attacks}
@@ -201,7 +200,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     Due to its nature, preventing DDoS attacks requires identifying limitations and security vulnerabilities in each IoT layer.
     There are two main categories of DDoS attacks: application layer attacks and infrastructure layer attacks \cite{article:14}, \cite{article:8}.
     The application-layer attacks exploit vulnerabilities of web servers or operating systems by leveraging weaknesses in HTTP, DNS or other application-specific protocols.
-    The main objective is to exhaust host resources by starting a background process, for instance, sending incomplete POST requests very slowly so that the server runs out of concurrent connections (Slowloris attack).
+    The main objective is to exhaust host resources by starting a background process, for instance, sending incomplete POST requests very slowly so that the server runs out of concurrent connections (Slowloris attack) \cite{damon2012hands}.
     The incoming malicious traffic is difficult to tell from the legitimate traffic and thus hard to mitigate.
     IoT botnets play a primary role in application layer attacks by providing a source of legitimate traffic.
 
@@ -283,7 +282,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=\linewidth]{figures/ann.jpg}}
-        \caption{Visual representation of an artificial neural network. \cite{article:18}}
+        \caption{Visual representation of an artificial neural network \cite{article:18}.}
         \label{fig:ann}
     \end{figure}
 
@@ -298,7 +297,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=\linewidth]{figures/cnn2.png}}
-        \caption{Visual representation of a convolutional neural network. \cite{ConvNet}}
+        \caption{Visual representation of a convolutional neural network \cite{ConvNet}.}
         \label{fig:cnn}
     \end{figure}
 
@@ -313,7 +312,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
     \begin{figure}[htbp]
         \centerline{\includegraphics[width=\linewidth]{figures/ae.jpg}}
-        \caption{Visual representation of an autoencoder. \cite{article:18}}
+        \caption{Visual representation of an autoencoder \cite{article:18}.}
         \label{fig:ae}
     \end{figure}
 
@@ -347,10 +346,10 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     In \cite{article:7}, the authors propose a novel approach for malware detection on IoT devices.
     They convert a binary malware executable file into an 8-bit vector and visualize it as fixed width, variable height grayscale image.
     They observe that images of files from different malware families appear visually distinct from malware files belonging to the same family.
-    Based on their findings, they extract features from the image using GIST, which has proven successful for scene and object classification tasks.
+    Based on their findings, they extract features from the image using GIST, which has proven successful for scene and object classification tasks \cite{torralba2003context}.
     The authors use a steerable pyramid, a multi-scale and multi-orientation image representation technique that applies multiple subsampling and smoothing stages resulting in a structure similar to a pyramid.
     For the classification, they use an unsupervised k-nearest neighbours algorithm.
-    The k-nearest neighbour's method leverages the existing data for clustering based on a similarity metric, for example, Euclidean distance \cte{taunk2019brief}.
+    The k-nearest neighbour's method leverages the existing data for clustering based on a similarity metric, for example, Euclidean distance \cite{taunk2019brief}.
     The classification of previously unseen samples takes place by feature extraction and selection of the k-nearest neighbours of that sample.
     The prediction is the majority of selected neighbours' labels.
     The authors evaluate the detection performance on a larger dataset of 25 different malware families comprising 9,458 binaries and tenfold cross-validation.
@@ -364,7 +363,8 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     The resource-constrained devices receive a pre-trained model and perform the classification locally.
     In the study, the authors propose using a two-tier architecture combining a lightweight, on-device classifier with a powerful cloud-based one.
     In this case, the objective is to recognize suspicious programs locally on the device and hand them over to the backend server for further analysis.
-    The researchers conduct experiments using the IoT DDoS malware dataset from IoTPOT. The dataset consists of 500 malware examples from multiple malware families.
+    The researchers conduct experiments using the IoT DDoS malware dataset IoTPOT \cite{IoTPOT}.
+    The dataset consists of 500 malware examples from multiple malware families.
     They collect the same number of samples of benign software to augment the data and divide the resulting data into train and test sets.
     They train their model to differentiate between goodware and malware and perform five-fold cross-validation.
     They show that the model detects malware with about 94\% accuracy while having the least amount of parameters compared to models from other studies.
@@ -394,7 +394,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
             \caption{Goodware}
             \label{fig2c}
         \end{subfigure}%
-        \caption{Example of malware and goodware binaries represented as grayscale images.}
+        \caption{Example of malware and goodware binaries represented as grayscale images \cite{article:7}.}
         \label{fig2}
     \end{figure*}
 
@@ -434,6 +434,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     It is hard to compare the accuracy of individual studies because they use different datasets and various lab setups to generate data.
     The literature reviewed in this study shows machine learning and deep learning models have great potential for DDoS detection in IoT.
     The majority of studies focus on network-level anomaly detection by leveraging metadata of traffic flow.
+    Table \ref{tab1} contains a summary and comparative analysis of the reviewed studies.
     Network-based anomaly detection is particularly beneficial for networks with resource-constrained devices that cannot execute complex software.
     Integration of network-based DDoS detection into existing networks offers an opportunity for an extra layer of security without the need to change the current infrastructure.
     One study shows that a deep learning-powered, network-based DDoS detection system is a viable, uncomplicated and provides a low-cost solution even within a home network \cite{inproceedings:1}.
