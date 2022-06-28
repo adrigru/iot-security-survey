@@ -1,6 +1,6 @@
 #!/bin/bash
-pdflatex report.tex
-bibtex report.aux
-pdflatex report.tex
-pdflatex report.tex
+pdflatex report
+bibtex report
+pdflatex report
+pdflatex report
 open report.pdf
