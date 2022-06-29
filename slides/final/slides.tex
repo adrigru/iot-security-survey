@@ -9,8 +9,8 @@
 %\hypersetup{pdfstartview={Fit}}
 
 
-\title[Machine Learning Approaches for Detection of DoS Attacks in IoT Networks] %optional
-{Machine Learning Approaches for Detection of DoS Attacks in IoT Networks}
+\title[Machine Learning Approaches for Detection of DDoS Attacks in IoT Networks] %optional
+{Machine Learning Approaches for Detection of DDoS Attacks in IoT Networks}
 
 \subtitle{}
 
@@ -24,7 +24,7 @@
 }
 
 \date[2022] % (optional)
-{Seminar IoT \& Security, May 2022}
+{Seminar IoT \& Security, July 2022}
 
 \begin{document}
 
@@ -42,9 +42,15 @@
         \frametitle{Table of Contents}
         \begin{enumerate}
             \item Introduction
-            \item Tentative report outline
-            \item References and related work
-            \item Tentative report schedule
+            \item Background
+            \begin{enumerate}
+                \item Botnets
+                \item DDoS
+                \item Mirai
+                \item Machine Learning 101
+            \end{enumerate}
+            \item Classification of IoT Malware based on Image Recognition
+            \item Conclusion
         \end{enumerate}
     \end{frame}
 %---------------------------------------------------------
@@ -52,7 +58,7 @@
 % Introduciton Motivation
 %---------------------------------------------------------
 \begin{frame}
-\frametitle{Motivation}
+\frametitle{Introduction}
   \begin{itemize}
     \item Internet of Things is constantly developing
       \begin{itemize}
@@ -63,6 +69,7 @@
       \begin{itemize}
           \item Challenging constrains due to hardware and networking limitations
           \item Heterogeneous networks producing large amounts of data
+          \item Low security standards, devices use default credentials
       \end{itemize}
     \item Fertile ground for privacy and security attacks
   \end{itemize}
@@ -72,14 +79,14 @@
 % Introduciton DDos
 %---------------------------------------------------------
 \begin{frame}
-\frametitle{Motivation}
+\frametitle{Introduction}
   \begin{itemize}
     \item Insecure IoT devices may threaten critical Internet infrastructure
       \begin{itemize}
           \item Using vulnerable consumer IoT devices becomes a common technique for orchestrating DDoS attacks
           \item Mirai botnet disrupted DNS service of Dyn and significantly limited accessibility of popular services such as Github, Netflix and Amazon
       \end{itemize}
-      \item Intelligent system monitoring  leveraging ML/DL methods provides a solution for threat detection
+      \item Intelligent system monitoring leveraging ML/DL methods provides a solution for threat detection
       \begin{itemize}
           \item Anomaly detection can facilitate detection of malicious traffic
           \item Prediction of future attacks by learning from existing examples
@@ -88,66 +95,73 @@
 \end{frame}
 
 %---------------------------------------------------------
-\section{Report structure}
+\section{Background}
 
-% Preliminary report structure
+% Botnets
 %---------------------------------------------------------
 \begin{frame}
-\frametitle{Preliminary report structure}
+\frametitle{Botnets}
   \begin{itemize}
-    \item Introduction
-      \begin{itemize}
-          \item What is the domain?
-          \item What are the challenges?
-          \item Why is it important?
+    \item Group of devices infected by malware
+    \item The size varies from hundreds to hundreds of thousands of devices
+    \item Can be controlled remotely by an attacker to execute malicious activities
+    \begin{itemize}
+          \item Phishing
+          \item Spamming
+          \item DDoS
       \end{itemize}
-      \item Background and related work
+    \item IoT provides an ideal foundation for botnets and carrying out DDoS attacks
       \begin{itemize}
-          \item Network anomaly detection
-          \item ML/DL for IoT security
-          \item DDos attacks in IoT networks
+          \item Easy target due to low security measures in IoT
+          \item High number of hackable devices
+          \item Massive pool of legitimate IP addresses and sources of traffic
         \end{itemize}
-      \item Theoretical framework and architectural design
-      \begin{itemize}
-          \item System architecture and performance measures
-          \item k-nearest neighbours
-          \item Boosting
-          \item Artificial neural network
-        \end{itemize}
-      \item Discussion
-      \item Conclusion
   \end{itemize}
 \end{frame}
 
-\section{Related work}
-
-% Related work
+% DDoS
 %---------------------------------------------------------
 \begin{frame}
-\frametitle{Related work}
+\frametitle{DDoS}
   \begin{itemize}
-    \item A Survey of Machine and Deep Learning Methods for Internet of Things (IoT) Security (IEE Communications Surveys \& Tutorials, cited by 425)
-    \item Real-time anomaly detection systems for Denial-of-Service attacks by weighted k-nearest-neighbor classifiers (Expert Systems with Applications, cited by 151)
-    \item Machine Learning DDoS Detection for Consumer Internet of Things Devices (2018 IEEE Security and Privacy Workshops (SPW), cited by 425)
-    \item Boosting-Based DDoS Detection in Internet of Things Systems (IEEE Internet of Things Journal 2022, cited by 20)
-    \item Detection of known and unknown DDoS attacks using Artificial Neural Networks (Neurocomputing, cited by 307)
+    \item Cyberattack that targets a host, network or infrastructure
+    \item The goal is to render the target unavailable for others by exhausting its resources (Bandwidth, Memory, CPU, etc.)
+    \item Attacks on critical internet infrastructure (DNS) have an enormous impact
+    \item Thanks to the broad availability of botnets DDoS is a simple yet powerful weapon
+    \item DDoS attacks happen on two levels:
+  \begin{itemize}
+      % Dont finish 3 way handshake or send a packet with origin IP adress same as receiving to crash the server
+      \item Network-level: exploits network layer protocols e.g.\ TCP, UDP, IP, etc.
+      % Send POST request very slowly or request
+      \item Application-level: exploits application layer protocols e.g.\ HTTP, DNS, etc.
+  \end{itemize}
+  \item There is a number of DDoS techniques including:
+      \begin{itemize}
+      % Dont finish 3 way handshake or send a packet with origin IP adress same as receiving to crash the server
+      \item Amplification: generate most traffic with least amount of bandwidth
+      % Send POST request very slowly or request
+      \item Reflection: used in combination with IP-spoofing to hide the origin IP
+  \end{itemize}
   \end{itemize}
 \end{frame}
 
 %---------------------------------------------------------
 
-\section{Report schedule}
-% Report schedule
+% Mirai botnet
 %---------------------------------------------------------
 \begin{frame}
-\frametitle{Report schedule}
+\frametitle{Mirai}
   \begin{itemize}
-    \item 10th May 2022: Presentation
-    \item Report outline, finish draft introduction and related work, start working on methods
-    \item 8th June 2022: Preliminary version of the report
+      % Embed figure 5 from 7178164.pdf
+    \item DDoS capable malware taht first appeared in 2016
+    \item Responsible for the biggest scale DDoS attack ever recorded peaking at 1.2Tbps
+    \begin{itemize}
+        \item Rendered popular internet services unavailable (Github, Netflix, Amazon, etc.)
+        \item Impacted United States and Europe
+    \end{itemize}
+    \item Botnet of approximately ~500k compromised devices
     \item Finish methods, discussion and conclusion, correct spelling, create slides for presentation
-    \item 3rd July 2022: Deadline for report submission
-    \item 6th July 2022: Final presentation
+    \item Source code was published causing a number of similar attacks to follow
   \end{itemize}
 \end{frame}
 
