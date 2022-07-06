@@ -60,24 +60,24 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     The great interest and predicted future adoption make IoT an active area of research that attracts scientists from outside of computer science and electrical engineering, for instance, social sciences or environmental studies.
     The enormous number of connected devices poses a significant security threat and provides a vector for potential misuse.
     In particular, the propagation of insecure IoT devices offers a fertile ground for malicious actors and has resulted in multiple distributed denial of service (DDoS) attacks on critical internet infrastructure \cite{article:16}, \cite{article:8}.
-    To address this issue, scientists propose various solutions, including Machine Learning techniques.
+    To address this issue, scientists propose various solutions, including machine learning techniques.
     Machine learning (ML) provides methods for detecting patterns in data and enjoys ever-increasing popularity.
-    Modern applications leverage Machine Learning for translation, speech recognition and computer vision \cite{Goodfellow-et-al-2016}.
-    In the cyber-security field, Machine Learning finds use for fraud, malware and spam detection \cite{article:18}.
+    Modern applications leverage machine learning for translation, speech recognition and computer vision \cite{Goodfellow-et-al-2016}.
+    In the cyber-security field, machine learning finds use for fraud, malware and spam detection \cite{article:18}.
     With the recent emergence of deep learning, strategical reasoning and decision-making of a machine may exceed human performance creating room for novel use-cases.
-    The application of modern Machine and Deep Learning approaches delivers a toolbox for network traffic analysis, intrusion detection and real-time anomaly detection.
-    Thanks to the variety of use-cases and the fragmentation within the IoT ecosystem, a broad implementation of Machine Learning methods for DDoS detection stays challenging.
+    The application of modern machine and deep Learning approaches delivers a toolbox for network traffic analysis, intrusion detection and real-time anomaly detection.
+    Thanks to the variety of use-cases and the fragmentation within the IoT ecosystem, a broad implementation of machine learning methods for DDoS detection stays challenging.
     Further limitations such as limited computing resources, energy constraints and complex system architecture call for novel solutions.
 
-    The aim of this study is to evaluate several Machine Learning approaches for DDoS detection in the context of practical implementation within the IoT ecosystem.
-    It will highlight various strategies for DDoS detection in IoT systems to explore the current state of the art and explain one method in more detail.
+    The aim of this study is to evaluate several machine learning approaches for DDoS detection in the context of practical implementation within the IoT ecosystem.
+    It will highlight various strategies for DDoS detection in IoT systems to explore the current state of the art and explain two methods in more detail.
     The objective is to improve the understanding of DDoS detection in IoT and demonstrate the role of machine learning.
 
 
     \section{Related Work}
     The application of machine learning approaches for DDoS detection in IoT is an emerging area of research.
     Although DDoS detection in IoT and DDoS detection with machine learning are both well-researched fields, the body of research on applying machine learning approaches for DDoS detection in IoT leaves much to be desired.
-    To my knowledge, there is no survey comparing machine learning and Deep Learning methods for DDoS detection under IoT constraints.
+    To my knowledge, there is no survey comparing machine learning and deep learning methods for DDoS detection under IoT constraints.
     Specifically, the practical aspects of these methods, such as computational complexity, energy consumption, ability to detect unknown attacks and detection performance, are unexplored and will benefit from further examination.
     The existing surveys focus on general DDoS attacks and defences in IoT or provide a broader perspective on various machine learning methods for IoT Security.
 
@@ -89,7 +89,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     Zargar et al., in their survey, propose a taxonomy of DDoS attacks and classify the existing countermeasures for different use-cases \cite{zargar2013survey}.
     They emphasise the role of IoT in the expansion of DDoS attacks.
 
-    \subsection{Machine learning for DDoS protection}
+    \subsection{Machine Learning for DDoS Protection}
     In the domain of DDoS detection using machine learning methods, Saied et al. apply Artificial Neural Networks (ANNs) to detect and prevent known and unknown DDoS attacks \cite{article:13}.
     They leverage network characteristic data to detect TCP, UDP and ICMP DDoS attacks.
     They obtain training data by reproducing the network environment under DDoS conditions.
@@ -98,7 +98,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     He proposes a genetic algorithm for feature selection and weighting and evaluates his classifier using several well-known DDoS attacks.
     He obtains 97.42\% detection accuracy for known types of DDoS attacks and 78\% for the unknown.
 
-    \subsection{Machine learning for IoT Security}
+    \subsection{Machine Learning for IoT Security}
     In \cite{cvitic2021novel}, Cvitic et al. propose a conceptual model for DDoS detection in IoT networks based on traffic characteristics.
     They argue that IoT-generated traffic is distinguishable from human-generated network traffic.
     They assign IoT traffic to three categories: periodic updates, event-driven and payload exchange.
@@ -112,13 +112,13 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     Sivanathan et al. show over 99\% accuracy in classifying IoT devices based on patterns in their network activity \cite{sivanathan2018classifying}.
     They collected network traffic data of 28 IoT devices such as cameras, lights and sensors for over six months.
     They present insights into the data using statistical features, propose a state-of-the-art performance multi-stage machine learning classifier and discuss trade-offs of their solution for real-time use.
-    Al-Garadi et al. present a survey on Deep Learning methods for IoT Security \cite{article:5}.
+    Al-Garadi et al. present a survey on deep learning methods for IoT Security \cite{article:5}.
     They introduce layers of the IoT system and picture various IoT-specific attack surfaces and threats.
-    They review and discuss several machine learning and Deep Learning methods for IoT security in the context of the advantages, shortcomings and opportunities.
-    Furthermore, they provide a comprehensive overview of studies applying machine learning and Deep Learning methods on different IoT layers (Perception, Network, Application).
+    They review and discuss several machine learning and deep learning methods for IoT security in the context of the advantages, shortcomings and opportunities.
+    Furthermore, they provide a comprehensive overview of studies applying machine learning and deep learning methods on different IoT layers (Perception, Network, Application).
     Finally, they discuss challenges, open issues and future directions for these techniques in IoT security.
 
-    \subsection{Machine learning for DDoS detection in IoT}
+    \subsection{Machine Learning for DDoS Detection in IoT}
     In the field of DDoS detection in IoT networks using machine learning, Aysa et al. investigate the performance of several machine learning approaches for DDoS detection based on network traffic patterns \cite{article:11}.
     The authors use a dataset of actual traffic data collected from 9 commercial IoT devices infected with Mirai and BASHLITE botnets.
     Preliminary results show that combining Decision Trees with a Random Forest outperforms other approaches.
@@ -135,7 +135,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     \section{Background and Methods}
     This section consists of two parts: Background and Methods.
     The first part introduces the terminology describing the IoT architecture, types of DDoS attacks, DDoS defence mechanisms and the role of IoT botnets in DDoS attacks.
-    The second part comprises an overview of studies on IoT-specific machine learning algorithms for DDoS detection.
+    The second part comprises an overview of two studies on IoT-specific machine learning algorithms for DDoS detection.
 
     \subsection{IoT Architecture}
     The IoT architecture consists of four primary layers, as shown in Fig. \ref{fig:iota} \cite{article:9}.
@@ -157,11 +157,11 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
         \label{fig:iota}
     \end{figure}
 
-    \subsection{Denial of service attacks}
+    \subsection{Denial of Service Attacks}
     A denial of service (DoS) attack is a cyberattack in which a cybercriminal seeks to render a host or network resource temporarily unavailable to other users \cite{article:8}.
     DoS attacks work by overwhelming the victim host with a substantial amount of requests, thus, exhausting its resources such as CPU, memory or network bandwidth.
     A distributed denial of service attack (DDoS) is a DoS attack in which the malicious traffic originates from multiple sources.
-    These attacks leverage groups of malware-infected, attacker-controlled devices called a botnet.
+    These attacks leverage groups of malware-infected, attacker-controlled devices called botnets.
     DDoS attacks consist of four phases \cite{article:8}:
     \begin{itemize}
         \item Recruitment: in this phase, the attacker performs a scan for a range of IP addresses and searches for vulnerable devices.
@@ -177,14 +177,14 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     Botnet sizes vary from a few hundred to tens or hundreds of thousands of devices.
     Their existence may remain undetected for years.
     IoT devices play a significant role in the effectiveness of DDoS attacks by providing uninterrupted internet connectivity, low-security standards and a large population.
-    A recent Linux-based botnet called Mirai \cite{article:16}, \cite{article:6} caused the greatest known DDoS attack, with a flooding rate peaking at 1.2 Tbps.
+    A recent Linux-based botnet called Mirai caused the greatest known DDoS attack, with a flooding rate peaking at 1.2 Tbps  \cite{article:16}, \cite{article:6}.
     The same botnet was responsible for a range of attacks, including an attack on DNS provider Dyn limiting access to services, such as Reddit, Netflix, Twitter and Amazon, across the European Union and the United States \cite{article:8}, \cite{article:16}.
     It operates and propagates in a systematic way, see Fig. \ref{fig:mirai}.
     Mirai scanns IP addresses for IoT devices with exposed Telnet or SSH services and tries brute-forcing the access using a dictionary of default username and password combinations \cite{article:8}, \cite{article:6}.
     In the next step, the C\&C server infects the devices by delivering the malware via FTP or wget for the specific hardware architecture, e.g. ARM, MIPS, Sparc, etc.
     The infected devices become a part of the Mirai botnet and can communicate with the C\&C server.
     The malware loader deletes itself after the installation to avoid detection, and the malware code runs solely in memory.
-    The botmaster can instruct the infected devices to perform multiple DDoS attacks or expand the botnet by scanning for additional victims.
+    The botmaster can instruct the infected devices to perform multiple types of DDoS attacks or expand the botnet by scanning for additional victims.
     Since the source code for Mirai became open source in 2016, a range of similar variants emerged, all competing for vulnerable devices.
 
     \begin{figure}[htbp]
@@ -196,7 +196,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     \subsection{Classification of DDoS Attacks}
     In practice, simple configuration and hardware constraints of IoT devices, particularly consumer-grade, result in outdated or insecure software and misconfiguration, creating an easy and attractive target for adversaries.
     The amount of always-on vulnerable IoT devices provides an opportunity for launching large-scale DDoS attacks.
-    IoT-specific DDoS attacks do not differ much from traditional DDoS attacks and involve diverse and sophisticated techniques \cite{article:14}.
+    IoT-specific DDoS attacks do not differ much from traditional DDoS attacks, but involve diverse and sophisticated techniques \cite{article:14}.
     Due to its nature, preventing DDoS attacks requires identifying limitations and security vulnerabilities in each IoT layer.
     There are two main categories of DDoS attacks: application layer attacks and infrastructure layer attacks \cite{article:14}, \cite{article:8}.
     The application-layer attacks exploit vulnerabilities of web servers or operating systems by leveraging weaknesses in HTTP, DNS or other application-specific protocols.
@@ -244,12 +244,12 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     This middleware can provide a user interface and allow setting user access credentials.
     It is questionable, however, whether additional levels of complexity will find broad user adoption within the consumer segment.
 
-    \subsection{Machine learning for DDos Protection}
+    \subsection{Machine Learning for DDos Protection}
     Machine learning algorithms for DDoS protection in IoT play a primary role in detecting malware and network traffic anomalies \cite{article:18}.
     Depending on the situation, the detection may occur on the IoT device, in the cloud or the network by leveraging additional or existing hardware \cite{article:5}.
-    Machine Learning is a set of methods that leverage data to make predictions or decisions without specifying a pre-defined set of rules \cite{Goodfellow-et-al-2016}.
-    Machine Learning algorithms fall into three main categories based on how they approach learning \cite{article:6}.
-    Supervised Machine Learning algorithms require labelled data in the form of input-output mappings \cite{Goodfellow-et-al-2016}.
+    Machine learning is a set of methods that leverage data to make predictions or decisions without specifying a pre-defined set of rules \cite{Goodfellow-et-al-2016}.
+    Machine learning algorithms fall into three main categories based on how they approach learning \cite{article:6}.
+    Supervised machine learning algorithms require labelled data in the form of input-output mappings \cite{Goodfellow-et-al-2016}.
     The goal is to create a mathematical model and learn these mappings by optimizing a cost function.
     After training, the model can perform predictions on previously unseen data.
     Therefore, the model lifecycle consists of two phases: training and inference.
@@ -258,11 +258,11 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     Reinforcement learning algorithms focus on providing agents that can interact with the environment.
     The training objective is to maximize a reward function by finding an optimal decision process.
     Reinforcement learning algorithms find use in autonomous vehicles and playing games against a human opponent \cite{Goodfellow-et-al-2016}.
-    The training process of Machine Learning algorithms is a time and resource-consuming task that requires GPUs and large amounts of data.
+    The training process of machine learning algorithms is a time and resource-consuming task that requires GPUs and large amounts of data.
     Trained models consist of thousands and even millions of parameters.
-    In recent years, Machine Learning approaches outperformed existing methods for image classification, anomaly and malware detection and text generation.
+    In recent years, machine learning approaches outperformed existing methods for image classification, anomaly and malware detection and text generation.
 
-    \subsection{Overview of deep learning}
+    \subsection{Overview of Deep Learning}
 
     Deep learning is a subcategory of machine learning that innovated the field of artificial intelligence in domains such as image processing, pattern recognition and computer vision \cite{article:17}, \cite{Goodfellow-et-al-2016}.
     Deep learning networks leverage raw data to extract non-linear, high-level features and learn to classify instances similar to those seen in the training.
@@ -272,7 +272,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     Deep learning shows tremendous potential in the cyber-security field for malware classification, intrusion and botnet detection \cite{article:17}, \cite{inproceedings:19}.
     For this reason, it is worthwhile to investigate their value in the context of DDoS detection for IoT.
 
-    \subsubsection{Artificial neural network}
+    \subsubsection{Artificial Neural Network}
     Artificial neural networks (ANN), also known as multilayer perceptron (MLP), is a supervised feed-forward neural network that consists of at least three layers of nodes: input, hidden and output layer  \cite{Goodfellow-et-al-2016}.
     Except for the input nodes, each node applies a non-linear activation function, which is critical for achieving the approximation capabilities of a neural network.
     Each node has a connection to all nodes in the preceding and succeeding layer yielding trainable weights of the network as shown in Fig. \ref{fig:ann}.
@@ -286,13 +286,13 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
         \label{fig:ann}
     \end{figure}
 
-    \subsubsection{Convolutional neural network}
+    \subsubsection{Convolutional Neural Network}
     A convolutional neural network (CNN) is a supervised artificial neural network that can process multidimensional inputs such as images or spectrograms of audio \cite{lecun1995convolutional}.
     This network combines convolutional and pooling layers for feature extraction with an ANN for final classification, see Fig. \ref{fig:cnn}.
     CNN works by shifting a filter across the input, computing a dot product and passing the output to an activation function.
     The pooling layers perform non-linear downsampling to reduce the size of feature maps and the number of trainable parameters.
     Pooling layers occur multiple times in the architecture following one or more convolutional layers.
-    The training works in a similar manner to conventional ANNs by using the gradient descent algorithm and backpropagation.
+    The training works in a similar manner to conventional ANNs by using the gradient descent algorithm and backpropagation \cite{Goodfellow-et-al-2016}.
     Convolutional neural networks have a broad range of applications, such as image and audio processing, object recognition and anomaly detection.
 
     \begin{figure}[htbp]
@@ -301,7 +301,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
         \label{fig:cnn}
     \end{figure}
 
-    \subsubsection{Deep autoencoder}
+    \subsubsection{Deep Autoencoder}
     Autoencoder is an unsupervised artificial neural network that learns to compress and reconstruct the input \cite{ballard1987modular}, \cite{rumelhart1985learning}.
     It consists of an encoder and decoder part, as depicted in Fig. \ref{fig:ae}.
     The encoder is an ANN in which each hidden layer is smaller than the preceding one.
@@ -316,7 +316,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
         \label{fig:ae}
     \end{figure}
 
-    \subsubsection{Performance metrics}
+    \subsubsection{Performance Metrics}
     There are different metrics for describing the performance of machine learning and deep learning models depending on the nature of the classification task \cite{Goodfellow-et-al-2016}, \cite{sokolova2009systematic}, \cite{garcia2009study} .
     Accuracy, precision, recall, F1 score and area under the curve (AUC) evaluate the performance of binary classification \cite{sokolova2009systematic}.
     In the case of multi-class problems, the researchers use accuracy and Cohen's Kappa \cite{garcia2009study}.
@@ -342,7 +342,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     \subsection{Methods}
     Machine learning methods for DDoS detection can be classified into two classes based on where the inference takes place:
 
-    \subsubsection{On-device detection}
+    \subsubsection{On-device Detection}
     In \cite{article:7}, the authors propose a novel approach for malware detection on IoT devices.
     They convert a binary malware executable file into an 8-bit vector and visualize it as fixed width, variable height grayscale image.
     They observe that images of files from different malware families appear visually distinct from malware files belonging to the same family.
@@ -398,9 +398,9 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
         \label{fig2}
     \end{figure*}
 
-    \subsubsection{Network-based detection}
+    \subsubsection{Network-based Detection}
     In \cite{article:4}, the authors propose a network-based approach that uses a deep learning model for anomaly detection in an enterprise network scenario.
-    The detection leverages statistical features of benign IoT traffic such as packet Source IP address, MAC address, packet size, etc.
+    The detection leverages statistical features of benign IoT traffic such as packet source IP address, MAC address, packet size, etc.
     It works by monitoring each device's traffic in the network and inspecting packets within different time window periods, for example, 100ms, 500ms, etc.
     Each host has a dedicated model to detect anomalous and suspicious behaviour.
     The benefit of this approach is a high heterogeneity tolerance considering the diversity of IoT hardware and functionality.
@@ -451,7 +451,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     Researchers in \cite{article:3} proved the capabilities of running a lightweight deep learning algorithm for malware detection on an IoT device.
     An opportunity for further research is to examine autoencoder-based anomaly detection techniques on-device.
     Studies report the solid performance of conventional machine learning techniques in the field of cyber-security \cite{xin2018machine}.
-    The drawback of these approaches is their limited ability to generalise information to classify previously unseen examples and the requirement for manual feature engineering \cite{Goodfellow-et-al-2016}.
+    The drawback of these approaches is their limited ability to generalise information, to classify previously unseen examples and the requirement for manual feature engineering \cite{Goodfellow-et-al-2016}.
     Deep learning models outperform conventional machine learning in computer vision and natural language processing \cite{Goodfellow-et-al-2016}.
     However, their effectiveness strongly depends on the availability of high-quality cyber-security datasets.
     Deep learning critics emphasise privacy issues, the difficulty diagnosing errors and computational complexity.
@@ -484,7 +484,7 @@ T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 
     \section{Conclusion}
-    This study provides a comprehensive overview of machine learning methods for DDoS detection in the IoT and summarizes their primary methods, functioning, benefits and critics.
+    This study provides a comprehensive overview of machine learning methods for DDoS detection in IoT and summarizes their primary methods, functioning, benefits and critics.
     It starts by introducing IoT architecture, DDoS, botnets and machine learning, followed by a detailed explanation of two deep learning approaches.
     DDoS detection in IoT combines diverse subjects, including botnet, malware and anomaly detection.
     Current works show great potential for deep learning algorithms, although there remains room for improvement, particularly in on-device inference and availability of actual DDoS data.
